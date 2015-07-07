@@ -1,4 +1,13 @@
 #!/usr/bin/env ruby
 require 'fgit'
+require 'rbconfig'
+void = RbConfig::CONFIG['host_os'] =~ /msdos|mswin|djgpp|mingw/ ? 'NUL' : '/dev/null'
+if !system("git --version >>#{void} 2>&1")
+  $stderr.puts <<-EOC
 
-Fgit::CLI.start(ARGV)
+  Git might not be installed properly.
+
+  EOC
+else
+  Fgit::CLI.start(ARGV)
+end
