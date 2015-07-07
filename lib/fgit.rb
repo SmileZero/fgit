@@ -1,5 +1,5 @@
 require "fgit/version"
 
 module Fgit
-  # Your code goes here...
+  autoload :CLI, "fgit/cli"
 end

@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'fgit'
+
+Fgit::CLI.start(ARGV)
