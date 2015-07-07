@@ -28,9 +28,11 @@ module Fgit
       end
 
       real_file_paths = ls(source_branch, file_name)
-      real_file_paths.split.compact.each do |file_path|
-        copy_command = "git checkout #{source_branch} #{file_path}"
-        system copy_command
+      unless real_file_paths.empty?
+        copy_command = "git ls-tree -r --name-only #{source_branch} | grep -E '^(.*/)*#{file_name}$' | xargs git checkout #{source_branch}"
+        puts "Handling..."
+        `#{copy_command}`
+        puts "Done."
       end
     end
   end
