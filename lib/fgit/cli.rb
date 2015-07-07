@@ -10,7 +10,7 @@ module Fgit
       real_file_paths = `#{command}`
 
       if real_file_paths.empty?
-        puts "[Error] File: #{file_name} can not be found！"
+        $stderr.puts "[Error] #{file_name} can not be found！<branch: #{source_branch}>"
       else
         puts real_file_paths
       end
@@ -19,6 +19,14 @@ module Fgit
 
     desc "cp BRANCH FILE_NAME", "copy file from the given branch"
     def cp(source_branch, file_name)
+      status = `git status -s`
+
+      unless status.empty?
+        $stderr.puts "[Warning] Please commit or stash your local changes."
+        $stderr.puts status
+        return
+      end
+
       real_file_paths = ls(source_branch, file_name)
       real_file_paths.split.compact.each do |file_path|
         copy_command = "git checkout #{source_branch} #{file_path}"
