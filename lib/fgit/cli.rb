@@ -10,7 +10,7 @@ module Fgit
       real_file_paths = `#{command}`
 
       if real_file_paths.empty?
-        $stderr.puts "[Error] #{file_name} can not be found！<branch: #{source_branch}>"
+        $stderr.puts "[Error] #{file_name} can not be found！<branch: #{branch}>"
       else
         puts real_file_paths
       end
