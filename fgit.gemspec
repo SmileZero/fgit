@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "fgit"
   spec.version       = Fgit::VERSION
   spec.authors       = ["yan_runchen"]
-  spec.email         = ["runchen.yan@drecom.co.jp"]
+  spec.email         = ["chen_0_1987@sina.com"]
 
   spec.summary       = %q{extend git for file manipulating from branch to branch}
   spec.description   = %q{extend git for file manipulating from branch to branch}
