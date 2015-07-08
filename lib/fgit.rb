@@ -1,2 +1,6 @@
 require "fgit/version"
-require "fgit/cli"
+
+module Fgit
+  autoload :Common, "fgit/common"
+  autoload :CLI, "fgit/cli"
+end
