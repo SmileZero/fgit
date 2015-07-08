@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["yan_runchen"]
   spec.email         = ["chen_0_1987@sina.com"]
 
-  spec.summary       = %q{extend git for file manipulating from branch to branch}
-  spec.description   = %q{extend git for file manipulating from branch to branch}
+  spec.summary       = %q{make command more easy to use for file manipulating from branch to branch base on git command}
+  spec.description   = %q{make command more easy to use for file manipulating from branch to branch base on git command}
   spec.homepage      = "https://github.com/SmileZero/fgit"
   spec.license       = "MIT"
 

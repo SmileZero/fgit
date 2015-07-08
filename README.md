@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fgit`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+This tool is just make command more easy to use for file manipulating from branch to branch base on git command
 
 ## Installation
 
@@ -22,15 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+* list all relative file paths in given branch by a filename or a regular expression of filename
+* copy all files from given branch by a filename or a regular expression of filename
 
-## Development
+Commands:
+  fgit ls BRANCH FILE_NAME
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+  fgit cp BRANCH FILE_NAME
+    with --force -f option: force to copy all files without confirm and ignore unstaged local changes
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
+
+Welcome any contrbutions to this project.
 
 1. Fork it ( https://github.com/[my-github-username]/fgit/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
