@@ -25,11 +25,13 @@ Or install it yourself as:
 * list all relative file paths in given branch by a filename or a regular expression of filename
 * copy all files from given branch by a filename or a regular expression of filename
 
+```
 Commands:
   fgit ls BRANCH FILE_NAME
 
   fgit cp BRANCH FILE_NAME
     with --force -f option: force to copy all files without confirm and ignore unstaged local changes
+```
 
 
 ## Contributing
