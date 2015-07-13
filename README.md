@@ -28,9 +28,20 @@ Or install it yourself as:
 ```
 Commands:
   fgit ls BRANCH FILE_NAME
+    list all relative file paths in given branch by a filename or a regular expression of filename
+
+    for example:
+      fgit ls origin/develop-2.0 top_image_001.png
+      fgit ls origin/develop-2.0 "profile_54321\d+\.json"
 
   fgit cp BRANCH FILE_NAME
+    copy all files from given branch by a filename or a regular expression of filename
+
     with --force -f option: force to copy all files without confirm and ignore unstaged local changes
+
+    for example:
+      fgit cp origin/develop-2.0 top_image_001.png
+      fgit cp origin/develop-2.0 profile_12345.+\.json
 ```
 
 
